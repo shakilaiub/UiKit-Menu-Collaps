@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Merchant</title>
+		
+        <link rel="stylesheet" href="css/uikit.min.css" />
+		<link rel="stylesheet" href="css/an.css" />
+		
+        <script src="js/jquery.min.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script>
+		
+		$(document).ready(
+		function()
+		{
+		var $window = $(window);		
+		
+		function checkWidth() {
+        var windowsize = $window.width();
+        if (windowsize < 768) {
+            
+			//$('#tm-offcanvas').removeClass('uk-active');
+			//$('.uk-offcanvas-bar').removeClass('uk-offcanvas-bar-show');
+			//$.UIkit.offcanvas.hide([force = true]);
+			//$.UIkit.offcanvas.hide('#tm-offcanvas');
+			$('#tm-oncanvas').hide();
+			}
+			else{
+			//$('#tm-offcanvas').addClass('uk-active');
+			//$('.uk-offcanvas-bar').addClass('uk-offcanvas-bar-show');
+			//$.UIkit.offcanvas.show('#tm-oncanvas');
+			//$.UIkit.offcanvas.hide([force = false]);
+			$('#tm-oncanvas').show();
+			}
+		}
+				
+		checkWidth();
+		$(window).resize(checkWidth);
+		
+		
+		});
+		
+		
+		</script>
+		
+		<!--script>
+		
+		$(document).ready(
+		function()
+		{
+		var $window1 = $(window1);		
+		
+		function checkWidth1() {
+        var windowsize1 = $window1.width();
+        if (windowsize1 >768) {
+            
+			$('#tm-offcanvas').addClass('uk-active');
+			$('.uk-offcanvas-bar').addClass('uk-offcanvas-bar-show');
+			
+			}
+			else{
+			$('#tm-offcanvas').removeClass('uk-active');
+			$('.uk-offcanvas-bar').removeClass('uk-offcanvas-bar-show');
+			
+			}
+		}
+				
+		checkWidth1();
+		$(window1).resize(checkWidth1);
+		
+		
+		});
+		
+		
+		</script-->
+		
+		
+    </head>
+    <body>
+	             <nav class="tm-navbar uk-navbar uk-navbar-attached">
+                   <div class="uk-container uk-container-center">
+
+                <a class="uk-navbar-brand uk-hidden-small" href="index.html"><img class="uk-margin uk-margin-remove" src="docs/images/logo_uikit.svg" width="90" height="30" title="UIkit" alt="UIkit"></a>
+
+                <!--ul class="uk-navbar-nav uk-hidden-small">
+                    <li><a href="docs/documentation_get-started.html">Get Started</a></li>
+                    <li><a href="docs/components.html">Components</a></li>
+                    <li><a href="docs/addons.html">Add-ons</a></li>
+                    <li><a href="docs/customizer.html">Customizer</a></li>
+                    <li><a href="showcase/index.html">Showcase</a></li>
+                </ul-->
+
+                <a href="#tm-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+
+                <div class="uk-navbar-brand uk-navbar-center uk-visible-small"><img src="docs/images/logo_uikit.svg" width="90" height="30" title="UIkit" alt="UIkit"></div>
+
+            </div>
+        </nav>
+		 
+		 <div class="uk-grid">
+		 
+		 <div class="uk-width-medium-3-10">
+		 
+	<!--<div id="tm-offcanvas" class="uk-offcanvas uk-active">
+
+            <div class="uk-offcanvas-bar uk-offcanvas-bar-show">-->
+           <!--for off canvas -->
+           <div id="tm-offcanvas" class="uk-offcanvas">
+
+            <div class="uk-offcanvas-bar">
+            
+
+                <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{ multiple: true }">
+                    <li class="uk-parent"><a href="#">Documentation</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="docs/documentation_get-started.html">Get started</a></li>
+                            <li><a href="docs/documentation_how-to-customize.html">How to customize</a></li>
+                            <li><a href="docs/documentation_layouts.html">Layout examples</a></li>
+                            <li><a href="docs/components.html">Components</a></li>
+                            <li><a href="docs/addons.html">Add-ons</a></li>
+                            <li><a href="docs/documentation_project-structure.html">Project structure</a></li>
+                            <li><a href="documentation_less-sass.html">Less &amp; Sass files</a></li>
+                            <li><a href="docs/documentation_create-a-theme.html">Create a theme</a></li>
+                            <li><a href="docs/documentation_create-a-style.html">Create a style</a></li>
+                            <li><a href="docs/documentation_customizer-json.html">Customizer.json</a></li>
+                            <li><a href="docs/documentation_javascript.html">Javascript</a></li>
+                            <li><a href="docs/documentation_custom-prefix.html">Custom prefix</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-nav-header">Components</li>
+                    <li class="uk-parent"><a href="#"><i class="uk-icon-wrench"></i> Defaults</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="docs/base.html">Base</a></li>
+                            <li><a href="docs/print.html">Print</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent"><a href="#"><i class="uk-icon-th-large"></i> Layout</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="docs/grid.html">Grid</a></li>
+                            <li><a href="docs/panel.html">Panel</a></li>
+                            <li><a href="docs/article.html">Article</a></li>
+                            <li><a href="docs/comment.html">Comment</a></li>
+                            <li><a href="docs/utility.html">Utility</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="showcase/index.html">Showcase</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        
+        <!--for side menu-->
+        
+        <div id="tm-oncanvas">
+
+            <div class="oncanvas-bar">
+            
+
+                <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{ multiple: true }">
+                    <li class="uk-parent"><a href="#">Documentation</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="docs/documentation_get-started.html">Get started</a></li>
+                            <li><a href="docs/documentation_how-to-customize.html">How to customize</a></li>
+                            <li><a href="docs/documentation_layouts.html">Layout examples</a></li>
+                            <li><a href="docs/components.html">Components</a></li>
+                            <li><a href="docs/addons.html">Add-ons</a></li>
+                            <li><a href="docs/documentation_project-structure.html">Project structure</a></li>
+                            <li><a href="documentation_less-sass.html">Less &amp; Sass files</a></li>
+                            <li><a href="docs/documentation_create-a-theme.html">Create a theme</a></li>
+                            <li><a href="docs/documentation_create-a-style.html">Create a style</a></li>
+                            <li><a href="docs/documentation_customizer-json.html">Customizer.json</a></li>
+                            <li><a href="docs/documentation_javascript.html">Javascript</a></li>
+                            <li><a href="docs/documentation_custom-prefix.html">Custom prefix</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-nav-header">Components</li>
+                    <li class="uk-parent"><a href="#"><i class="uk-icon-wrench"></i> Defaults</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="docs/base.html">Base</a></li>
+                            <li><a href="docs/print.html">Print</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent"><a href="#"><i class="uk-icon-th-large"></i> Layout</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="docs/grid.html">Grid</a></li>
+                            <li><a href="docs/panel.html">Panel</a></li>
+                            <li><a href="docs/article.html">Article</a></li>
+                            <li><a href="docs/comment.html">Comment</a></li>
+                            <li><a href="docs/utility.html">Utility</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="showcase/index.html">Showcase</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        
+        
+        <!--end for side menu-->
+        
+        
+	</div><!--end of 3 grid-->	
+	
+	 <div class="uk-width-medium-7-10">
+	      <div class="uk-overflow-container">
+		  <table class="uk-table">
+		       <caption>This Month Transaction History</caption>
+			            <thead>
+						<tr>
+							<th>Gateway</th>
+							<th>Total</th>
+							<th>Success</th>
+							<th>Failed</th>
+							<th>Paid</th>
+							<th>UnPaid</th>
+							<th>Reverse</th>
+							<th>Chain</th>
+							<th>Amount</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>Anna</td>
+							<td>View</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>Debbie</td>
+							<td>View</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>John</td>
+							<td>John</td>
+							<td>John</td>
+							<td>John</td>
+							<td>John</td>
+							<td>John</td>
+							<td>John</td>
+							<td>John</td>
+							<td>View</td>
+						</tr>
+						</tbody>
+		  </table>
+		  </div>
+	 </div>
+</div>
+    </body>
+</html>
